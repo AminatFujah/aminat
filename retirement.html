@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  	<title> Retirement Calculator</title>
+  </head>
+  <body>
+  	<h1>Retirement Age Calculator</h1>
+  	<hr>
+  	<h3 id="name"></h3>
+  	<h3 id="yearOfbirth"></h3>
+  	<h3 id="age"></h3>
+  	<h3 id="retirementStatus"></h3>
+  	<h3 id="error"></h3>
+  	<button onclick="window.location=''">Do another Calculation</button>
+
+
+  	<script>
+  		let name = prompt("Enter Full Name","");
+  		let yearOfbirth = parseInt(prompt("Enter Year Of Birth",""));
+
+  		isNaN(yearOfbirth) ? document.getElementsById('error').innerHTML = "Sorry Please Enter correct Details, Click the button below to try again " : document.getElementsById('name').innerHTML = "name : " + name
+  		;
+
+  		isNaN(yearOfbirth) ? document.getElementsById('error').innerHTML = "Sorry Please Enter correct Details, Click the button below to try again " : document. getElementsById('age').innerHTML = "Age :" + (2020 - yearOfbirth)
+  		;
+
+  		isNaN(yearOfbirth) ? document.getElementsById('error').innerHTML = "Sorry Please Enter correct Details, Click the button below to try again " : (2020 - yearOfbirth >= 65) ? document.getElementsById('retirementStatus').innerHTML = 'You are between the age bracket of 65 and above, therefore you are retired' : document.getElementsById('retirementStatus').innerHTML =  'Your age bracket is below 65 therefore you are not retired'
+  		; 
+
+
+
+
+  	</script>
+  </body>
+  </html>
